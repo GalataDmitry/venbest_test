@@ -104,12 +104,12 @@ const App = () => {
             if (checkInputResultData()) setFilteredData(resultData)
             if (checkInputFilterData()) filters()
         }, [
-            inputNameFilterValue,
-            inputLastNameFilterValue,
+            resultData,
             inputAgeFilterValue,
+            inputNameFilterValue,
             inputMaleFilterValue,
             inputFemaleFilterValue,
-            resultData
+            inputLastNameFilterValue
         ]
     )
 
