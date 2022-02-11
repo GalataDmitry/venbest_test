@@ -135,8 +135,10 @@ const App = () => {
                 />
                 <td/>
                 sex:
-                <input type='checkbox' id='1' checked={checkedMale} onChange={changeCheckboxMaleFunc}/>m
-                <input type='checkbox' id='2' checked={checkedFemale} onChange={changeCheckboxFemaleFunc}/>f
+                <input type='checkbox' id='1' checked={checkedMale} onChange={changeCheckboxMaleFunc}/>
+                <label>m</label>
+                <input type='checkbox' id='2' checked={checkedFemale} onChange={changeCheckboxFemaleFunc}/>
+                <label>f</label>
                 <hr/>
             </div>
             {
