@@ -14,11 +14,9 @@ const App = () => {
     const [checkedFemale, setCheckedFemale] = useState(false)
 
     const getData = () => {
-
         let requestOptions = {
             method: 'GET',
         }
-
         fetch("https://venbest-test.herokuapp.com/", requestOptions)
             .then(response => response.text())
             .then(result => setResultData(JSON.parse(result)))
@@ -71,28 +69,28 @@ const App = () => {
     }
 
     const changeCheckboxMaleFunc = () => {
-        if (inputMaleFilterValue === '') {
+        if (!inputMaleFilterValue) {
             setInputMaleFilterValue('m')
             setCheckedMale(true)
         } else {
             setInputMaleFilterValue('')
             setCheckedMale(false)
         }
-        if (inputFemaleFilterValue !== '' && checkedFemale === true) {
+        if (inputFemaleFilterValue && checkedFemale) {
             setInputFemaleFilterValue('')
             setCheckedFemale(false)
         }
     }
 
     const changeCheckboxFemaleFunc = () => {
-        if (inputFemaleFilterValue === '') {
+        if (!inputFemaleFilterValue) {
             setInputFemaleFilterValue('f')
             setCheckedFemale(true)
         } else {
             setInputFemaleFilterValue('')
             setCheckedFemale(false)
         }
-        if (inputMaleFilterValue !== '' && checkedMale === true) {
+        if (inputMaleFilterValue && checkedMale) {
             setInputMaleFilterValue('')
             setCheckedMale(false)
         }
