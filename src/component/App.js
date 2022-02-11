@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState} from 'react'
 import {v4 as uuidv4} from 'uuid'
 
 const App = () => {
@@ -103,14 +103,8 @@ const App = () => {
     }, [])
 
     useEffect(() => {
-
-            if (checkInputResultData()) {
-                setFilteredData(resultData)
-            }
-            if (checkInputFilterData()) {
-                filters()
-            }
-
+            if (checkInputResultData()) setFilteredData(resultData)
+            if (checkInputFilterData()) filters()
         }, [
             inputNameFilterValue,
             inputLastNameFilterValue,
