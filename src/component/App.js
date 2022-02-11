@@ -34,15 +34,15 @@ const App = () => {
     }
 
     const filterAgeFunc = (el) => {
-        return String(el.age).toLowerCase().includes(inputAgeFilterValue.toLowerCase())
+        return String(el.age).includes(inputAgeFilterValue)
     }
 
     const filterMaleFunc = (el) => {
-        return el.sex.toLowerCase().includes(inputMaleFilterValue.toLowerCase())
+        return el.sex.includes(inputMaleFilterValue)
     }
 
     const filterFemaleFunc = (el) => {
-        return el.sex.toLowerCase().includes(inputFemaleFilterValue.toLowerCase())
+        return el.sex.includes(inputFemaleFilterValue)
     }
 
     const checkInputResultData = () => {
